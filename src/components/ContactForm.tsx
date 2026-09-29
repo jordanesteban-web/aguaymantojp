@@ -37,9 +37,10 @@ export function ContactForm({
   defaultProducto,
   defaultAsunto,
 }: {
-  defaultProducto?: string;
-  defaultAsunto?: string;
+  defaultProducto?: string | undefined;
+  defaultAsunto?: string | undefined;
 }) {
+
   const [sent, setSent] = useState(false);
 
   const {
