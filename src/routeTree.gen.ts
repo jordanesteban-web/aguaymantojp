@@ -15,6 +15,7 @@ import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-p
 import { Route as ProductosRouteImport } from './routes/productos'
 import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TerminosYCondicionesRouteImport } from './routes/terminos-y-condiciones'
 import { Route as NoticiasIndexRouteImport } from './routes/noticias/index'
 import { Route as NoticiasSlugRouteImport } from './routes/noticias/$slug'
@@ -49,6 +50,11 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TerminosYCondicionesRoute = TerminosYCondicionesRouteImport.update({
   id: '/terminos-y-condiciones',
   path: '/terminos-y-condiciones',
@@ -72,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/productos': typeof ProductosRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/noticias/': typeof NoticiasIndexRoute
@@ -83,6 +90,7 @@ export interface FileRoutesByTo {
   '/productos': typeof ProductosRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/noticias': typeof NoticiasIndexRoute
@@ -95,6 +103,7 @@ export interface FileRoutesById {
   '/productos': typeof ProductosRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/noticias/': typeof NoticiasIndexRoute
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/productos'
     | '/quienes-somos'
     | '/servicios'
+    | '/sitemap.xml'
     | '/terminos-y-condiciones'
     | '/noticias/$slug'
     | '/noticias/'
@@ -119,6 +129,7 @@ export interface FileRouteTypes {
     | '/productos'
     | '/quienes-somos'
     | '/servicios'
+    | '/sitemap.xml'
     | '/terminos-y-condiciones'
     | '/noticias/$slug'
     | '/noticias'
@@ -130,6 +141,7 @@ export interface FileRouteTypes {
     | '/productos'
     | '/quienes-somos'
     | '/servicios'
+    | '/sitemap.xml'
     | '/terminos-y-condiciones'
     | '/noticias/$slug'
     | '/noticias/'
@@ -142,6 +154,7 @@ export interface RootRouteChildren {
   ProductosRoute: typeof ProductosRoute
   QuienesSomosRoute: typeof QuienesSomosRoute
   ServiciosRoute: typeof ServiciosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TerminosYCondicionesRoute: typeof TerminosYCondicionesRoute
   NoticiasSlugRoute: typeof NoticiasSlugRoute
   NoticiasIndexRoute: typeof NoticiasIndexRoute
@@ -191,6 +204,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terminos-y-condiciones': {
       id: '/terminos-y-condiciones'
       path: '/terminos-y-condiciones'
@@ -222,6 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProductosRoute: ProductosRoute,
   QuienesSomosRoute: QuienesSomosRoute,
   ServiciosRoute: ServiciosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TerminosYCondicionesRoute: TerminosYCondicionesRoute,
   NoticiasSlugRoute: NoticiasSlugRoute,
   NoticiasIndexRoute: NoticiasIndexRoute,
