@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { VideoButton } from "./VideoButton";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
@@ -44,16 +45,18 @@ const slides: Slide[] = [
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   const go = useCallback((next: number) => {
     setIndex((next + slides.length) % slides.length);
   }, []);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || videoOpen) return;
     const id = window.setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
     return () => window.clearInterval(id);
-  }, [paused, index]);
+  }, [paused, videoOpen, index]);
+
 
   return (
     <section
@@ -120,7 +123,9 @@ export function HeroSlider() {
               </div>
             </div>
           ))}
+          <VideoButton onOpenChange={setVideoOpen} />
         </div>
+
 
         <div className="mt-12 flex items-center gap-4">
           <div className="flex gap-2" role="tablist" aria-label="Seleccionar diapositiva">
