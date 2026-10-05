@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Play, X } from "lucide-react";
 import { site } from "@/config/site";
 
@@ -35,7 +36,8 @@ export function VideoButton({ onOpenChange }: { onOpenChange?: (open: boolean) =
         </span>
       </button>
 
-      {open ? (
+      {open
+        ? createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -61,8 +63,10 @@ export function VideoButton({ onOpenChange }: { onOpenChange?: (open: boolean) =
               allowFullScreen
             />
           </div>
-        </div>
-      ) : null}
+        </div>,
+        document.body,
+      )
+        : null}
     </>
   );
 }
