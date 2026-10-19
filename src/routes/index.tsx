@@ -74,7 +74,7 @@ function Index() {
       <section className="bg-secondary/60 section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            eyebrow="Nuestros productos"
+            eyebrow="Nuestro producto bandera"
             title="Aguaymanto seleccionado para cada tipo de cliente"
             description="Conoce nuestras principales líneas de producto y consúltanos por la presentación que necesitas."
           />
