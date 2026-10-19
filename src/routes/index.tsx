@@ -44,8 +44,8 @@ function Index() {
       <section className="section-y">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
           <SectionTitle
-            eyebrow="Sobre nosotros"
-            title="Comprometidos con la calidad del aguaymanto peruano"
+            eyebrow="Sobre la empresa"
+            title="Comprometidos con la calidad del aguaymanto limatambeño"
             description="Somos una empresa dedicada a la producción y comercialización de aguaymanto, comprometida con ofrecer productos de calidad y construir relaciones comerciales duraderas con nuestros clientes."
           >
             <Button asChild variant="brand" size="lg" className="mt-7">
