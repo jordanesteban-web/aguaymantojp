@@ -16,7 +16,7 @@ import campo from "@/assets/hero-2.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aguaymanto Perú | Producción y venta de aguaymanto peruano" },
+      { title: "Aguaymanto Perú | Producción y venta de aguaymanto peruano - Limatambo" },
       {
         name: "description",
         content:
