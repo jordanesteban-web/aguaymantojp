@@ -20,7 +20,7 @@ const slides: Slide[] = [
   {
     image: hero1,
     alt: "Canasta con aguaymanto fresco recién cosechado frente a un campo de cultivo peruano",
-    title: "Aguaymanto peruano, calidad que nace en nuestra tierra",
+    title: "Aguaymanto peruano, calidad que nace en nuestra tierra de Limatambo",
     text: "Producimos y comercializamos aguaymanto seleccionado, llevando el sabor y la calidad del campo peruano a nuestros clientes.",
     actions: [
       { label: "Conocer nuestros productos", to: "/productos", variant: "cta" },
@@ -30,14 +30,14 @@ const slides: Slide[] = [
   {
     image: hero2,
     alt: "Plantación de aguaymanto en la sierra peruana con montañas al fondo",
-    title: "Del campo peruano a nuevos mercados",
+    title: "Del campo peruano a nuevos mercados de Limatambo",
     text: "Trabajamos para ofrecer productos agrícolas de calidad, con compromiso, responsabilidad y visión de crecimiento.",
     actions: [{ label: "Conoce nuestra empresa", to: "/quienes-somos", variant: "cta" }],
   },
   {
     image: hero3,
     alt: "Trabajadores seleccionando aguaymanto fresco sobre mesa de acero inoxidable",
-    title: "Natural, versátil y de excelente calidad",
+    title: "Natural, versátil y de excelente calidad en Limatambo",
     actions: [{ label: "Ver productos", to: "/productos", variant: "cta" }],
   },
 ];
