@@ -1,8 +1,8 @@
 /**
  * Configuración central del sitio.
  * Edita aquí los datos de la empresa: todo el sitio los toma de este archivo.
- * Los valores entre [corchetes] son placeholders pendientes de confirmación.
  */
+
 
 export const site = {
   company: {
