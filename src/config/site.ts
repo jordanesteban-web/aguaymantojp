@@ -6,9 +6,9 @@
 
 export const site = {
   company: {
-    name: "[NOMBRE DE LA EMPRESA]",
-    brand: "AGUAYMANTO PERÚ",
-    tagline: "Calidad y compromiso desde el campo peruano.",
+    name: "aguaymantojp",
+    brand: "AGUAYMANTOJP",
+    tagline: "Exportamos y comercializamos aguaymanto peruano fresco seleccionado de alta calidad.",
     shortDescription:
       "Producción y comercialización de aguaymanto peruano seleccionado para clientes particulares, restaurantes, tiendas, distribuidores y compradores mayoristas.",
   },
