@@ -98,10 +98,6 @@ function Contacto() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-              Los datos entre corchetes son provisionales y deben reemplazarse por la información
-              real de la empresa.
-            </p>
           </Reveal>
 
           <Reveal delay={120}>
