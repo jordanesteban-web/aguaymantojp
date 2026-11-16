@@ -56,7 +56,7 @@ function QuienesSomos() {
               className="aspect-4/3 w-full rounded-2xl object-cover shadow-[var(--shadow-card)]"
             />
           </Reveal>
-          <SectionTitle eyebrow="Nuestra empresa" title="Producto, personas y confianza">
+          <SectionTitle eyebrow="Sobre Nuestra empresa" title="Producto, personas y confianza">
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
                 Somos una empresa peruana dedicada a la producción, comercialización y venta de
